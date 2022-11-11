@@ -18,7 +18,7 @@ export default function Products(){
         return (
                 <div
                     key={`prod${prod.id}`}
-                    className="max-w-sm w-full lg:max-w-full lg:flex border border-gray-400 rounded-md"
+                    className="max-w-sm w-full lg:max-w-full lg:flex mx-auto border border-gray-400 rounded-md lg:drop-shadow-xl"
                 >
                     <div className="h-48 lg:h-auto lg:w-48 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
                         <a href={`/product/${prod.id}`}>
@@ -48,7 +48,7 @@ export default function Products(){
     return(
         <div>
             <p className='text-[60px] flex justify-center my-20 underline'>All Products</p>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className='grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {productMap}
             </div>
         </div>
