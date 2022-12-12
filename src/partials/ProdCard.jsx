@@ -1,7 +1,7 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function ProdCard(props) {
-    const navigate = useNavigate()
+
     return(
         <div
             key={`prod${props.id}`}
