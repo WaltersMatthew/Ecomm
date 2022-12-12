@@ -10,6 +10,7 @@ export default function Products(){
             try {
                 const response = await axios.get('https://dummyjson.com/products')
                 setProducts(response.data.products)
+
             } catch (error) {
                 console.log(error)
             }
@@ -19,11 +20,16 @@ export default function Products(){
     const productMap = products.map(prod => {
         return (
                 <ProdCard
+                    key={`prodid${prod.id}`}
                     id={prod.id}
-                    thumbnail={prod.thumbnail}
                     title={prod.title}
                     description={prod.description}
                     price={prod.price}
+                    discountPercentage={prod.discountPercentage}
+                    rating={prod.rating}
+                    stock={prod.stock}
+                    thumbnail={prod.thumbnail}
+                    images={prod.images}
                 />
         )
     })

@@ -1,13 +1,27 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function ProdCard(props) {
+    const navigate = useNavigate()
     return(
         <div
             key={`prod${props.id}`}
             className="max-w-sm w-full lg:max-w-full lg:flex mx-auto border border-gray-400 rounded-md lg:drop-shadow-sm"
         >
             <div className="h-48 lg:h-auto lg:w-48 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
-                <Link to={`/product/${props.id}`}>
+                <Link 
+                    to={`/product/${props.id}`}
+                    state={{
+                        prodId: props.id,
+                        title: props.title,
+                        description: props.description,
+                        price: props.price,
+                        discountPercentage: props.discountPercentage,
+                        rating: props.rating,
+                        stock: props.stock,
+                        thumbnail: props.thumbnail,
+                        images: props.images,
+                    }}  
+                >
                     <img 
                     src={props.thumbnail}
                     alt={props.title}
