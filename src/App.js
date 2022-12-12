@@ -10,11 +10,7 @@ function App() {
       <Nav />
       <Routes>
         <Route
-          path=''
-          element={<Home />}
-        />
-        <Route
-          path='/products'
+          path='/'
           element={<Products />}
         />
 
