@@ -6,17 +6,21 @@ export default function Product(){
     const prod = location.state   
     
     let starRating = ''
-    if (prod.rating < 2){
-        starRating = '⭐️'
-    }else if (prod.rating < 3){
-        starRating = '⭐️⭐️'
-    }else if (prod.rating < 4){
-        starRating = '⭐️⭐️⭐️'
-    }else if (prod.rating < 5){
-        starRating = '⭐️⭐️⭐️⭐️'
-    }else if (prod.rating === 5){
-        starRating = '⭐️⭐️⭐️⭐️⭐️'
+    if (prod.rating){
+        if (prod.rating < 2){
+            starRating = '⭐️'
+        }else if (prod.rating < 3){
+            starRating = '⭐️⭐️'
+        }else if (prod.rating < 4){
+            starRating = '⭐️⭐️⭐️'
+        }else if (prod.rating < 5){
+            starRating = '⭐️⭐️⭐️⭐️'
+        }else if (prod.rating === 5){
+            starRating = '⭐️⭐️⭐️⭐️⭐️'
+        }
     }
+
+    
 
     return(
         // wrapper div
